@@ -29,7 +29,7 @@ const heroStyles = {
   },
   image: {
     width: '100%',
-    maxWidth: '00px',
+    maxWidth: '1000px',
     height: 'auto',
   },
 };

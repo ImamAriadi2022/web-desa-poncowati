@@ -45,7 +45,7 @@ const CustomNavbar = () => {
   return (
     <Navbar style={customStyles.navbar} expand="lg">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img src="img/logo-transad.png" alt="Logo" style={customStyles.logo} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

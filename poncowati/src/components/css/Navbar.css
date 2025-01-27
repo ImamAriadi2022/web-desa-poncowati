@@ -1,0 +1,8 @@
+.navbar-nav .nav-item .dropdown-toggle::after {
+  display: none !important;
+}
+
+.navbar-nav .nav-item .dropdown-menu {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}

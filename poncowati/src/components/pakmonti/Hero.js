@@ -1,4 +1,6 @@
 import React from 'react';
+import { Carousel } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const heroStyles = {
   '@import': 'url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&display=swap")',
@@ -38,9 +40,24 @@ const Hero = () => {
   return (
     <div style={heroStyles.hero}>
       <div style={heroStyles.heroContent}>
-        <h2 style={heroStyles.h2}>Pak Monti </h2>
+        <h2 style={heroStyles.h2}>Pak Monti</h2>
         <p style={heroStyles.p}>Temukan Informasi Publik Terkini Mengenai Desa Poncowati</p>
-        <img src="img/hero-pakmonti.png" alt="Desa Poncowati" style={heroStyles.image} />
+        <Carousel>
+          <Carousel.Item>
+            <img src="img/hero-pakmonti.png" alt="Desa Poncowati" style={heroStyles.image} />
+          </Carousel.Item>
+          <Carousel.Item>
+            <div style={heroStyles.image}>
+              <span>Placeholder 2</span>
+            </div>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div style={heroStyles.image}>
+              <span>Placeholder 3</span>
+            </div>
+          </Carousel.Item>
+          {/* Tambahkan lebih banyak Carousel.Item jika diperlukan */}
+        </Carousel>
       </div>
     </div>
   );

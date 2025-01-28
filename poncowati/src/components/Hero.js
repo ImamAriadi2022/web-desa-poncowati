@@ -1,26 +1,36 @@
 import React from 'react';
+import { Carousel } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const heroStyles = {
   '@import': 'url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700&display=swap")',
   hero: {
     height: '85vh',
-    backgroundImage: 'url("img/bg-hero.png")',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
     color: '#208327',
     fontFamily: "'Merriweather Sans', sans-serif",
+    position: 'relative',
   },
   heroContent: {
     maxWidth: '600px',
+    position: 'relative',
+    zIndex: 2,
   },
-  p: {
-    paddingTop: '2rem',
-    paddingButtom: 'none',
-    marginButtom: 'none',
+  carousel: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    zIndex: 1,
+  },
+  carouselItem: {
+    height: '85vh',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
   },
   h1: {
     fontSize: '3rem',
@@ -31,6 +41,12 @@ const heroStyles = {
   h3: {
     fontSize: '1.5rem',
     marginBottom: '0.5rem',
+  },
+  p: {
+    fontSize: '1.5rem',
+    fontWeight: 'bold', // Bold
+    fontStyle: 'italic', // Italic
+    marginBottom: '1rem',
   },
   searchEngine: {
     margin: '2rem 0',
@@ -69,6 +85,11 @@ const heroStyles = {
 const Hero = () => {
   return (
     <div style={heroStyles.hero}>
+      <Carousel controls={false} indicators={false} interval={3000} style={heroStyles.carousel}>
+        <Carousel.Item style={{ ...heroStyles.carouselItem, backgroundImage: 'url("img/bg-hero.png")' }} />
+        <Carousel.Item style={{ ...heroStyles.carouselItem, backgroundImage: 'url("img/bg-hero2.png")' }} />
+        <Carousel.Item style={{ ...heroStyles.carouselItem, backgroundImage: 'url("img/bg-hero3.png")' }} />
+      </Carousel>
       <div style={heroStyles.heroContent}>
         <h1 style={heroStyles.h1}>Portal Desa Poncowati</h1>
         <h3 style={heroStyles.h3}>Kec. Terbanggi Besar Kab. Lampung Tengah</h3>
